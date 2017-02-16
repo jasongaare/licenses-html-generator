@@ -110,6 +110,9 @@ var licensesHtmlGenerator = {
 }
 
 function isGitRepoUrl(url) {
+    if (!url) {
+      return;
+    }
     return url.startsWith('http');
 }
 
