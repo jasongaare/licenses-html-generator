@@ -36,7 +36,7 @@ if (workingDir == null) {
 var reposDir = path.join(workingDir, 'repos');
 var outDir = path.join(workingDir, 'out');
 
-var sourceList = require(path.join(workingDir, 'sources.json'));
+var sourceList = path.join(workingDir, 'sources.json');
 
 /* Exported object */
 var licensesHtmlGenerator = {
