@@ -50,6 +50,9 @@ var licensesHtmlGenerator = {
         for (var i = 0; i < sourceList.length; i++) {
             var source = sourceList[i];
             var uri = source.uri || source.url;
+            if (uri.startsWith('git+')) {
+              uri = uri.substr(4);
+            }
             if (!isGitRepoUrl(uri)) {
                 continue;
             }
